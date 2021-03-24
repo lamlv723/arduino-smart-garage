@@ -1,7 +1,7 @@
 #include <ESP8266WiFi.h>
 
-const char* ssid = "Satellite";
-const char* password = "binhantamto37";
+const char* ssid = "Van Lam";
+const char* password = "12345678";
 
 int LED = D1; // GPIO16 (D0)
 WiFiServer server(80);
@@ -61,6 +61,9 @@ void loop(){
   client.println("");
   client.println("<!DOCTYPE HTML>");
   client.println("<html>");
+  client.print("<HEAD>");
+  client.print("<meta charset=\"utf-8\"></meta>");
+  client.print("</head>");
   client.print(" CONTROL LED: ");
   if(value == HIGH){
     client.print("OFF");
